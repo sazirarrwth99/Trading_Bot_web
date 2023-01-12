@@ -41,8 +41,8 @@ while True:
         cash_ = 10000 # set a default symbol
     # Get the stock data
     try:
-        start_time = dt.datetime.now() - dt.timedelta(days=3)
-        stock_data = yf.download(stock_symbol, start=start_time, interval="1m",period="3d")
+        start_time = dt.datetime.now() - dt.timedelta(days=1)
+        stock_data = yf.download(stock_symbol, start=start_time, interval="1m",period="1d")
         
         timeseries = list(stock_data["Close"].values)
         list_actions = [ enviroment.predict(timeseries, t=i) for i in tqdm(range(1023, len(timeseries)))]
