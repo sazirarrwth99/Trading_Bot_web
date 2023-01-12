@@ -7,5 +7,5 @@ numpy
 tqdm
 scikit-learn
 logging
-torch
+pytorch
 pandas
