@@ -1,0 +1,13 @@
+yfinance
+matplotlib
+streamlit
+datetime
+time
+plotly
+os
+numpy
+tqdm
+scikit-learn
+logging
+torch
+pandas
