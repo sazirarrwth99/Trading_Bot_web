@@ -72,8 +72,8 @@ while True:
         #plot  with plotly
         colors = ["#003366","#99ccff"]
         traces = [
-            go.Scatter(x=stock_data.index, y=(stock_data["Close"]/start_price)*int(cash), name="Close Price", line=dict(color=colors[0])),
-            go.Scatter(x=dates_min, y=portefolio_values, name="RL Value", line=dict(color=colors[1]))
+            go.Scatter(x=stock_data.index, y=(stock_data["Close"]/start_price)*int(cash), name="Value Apple Stocks without trading", line=dict(color=colors[0])),
+            go.Scatter(x=dates_min, y=portefolio_values, name="RL Portefolio value", line=dict(color=colors[1]))
         ]
         layout = go.Layout(title='Portfolio Value over Time',
                    xaxis=dict(title='Date', tickangle=45, showgrid=True, showline=True, showticklabels=True,  tickmode='auto', nticks=0, tickfont=dict(size=14, color='black'), side='bottom', mirror='all', gridcolor='#bdbdbd', gridwidth=1, zeroline=True, zerolinecolor='#969696', zerolinewidth=1, linecolor='#636363', linewidth=1, ticks='outside', tickcolor='#636363', ticklen=5, tickwidth=1),
