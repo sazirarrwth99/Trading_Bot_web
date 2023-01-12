@@ -21,7 +21,7 @@ from agent import *
 from enviroment import *
 import os
 
-enviroment = Enviroment("/Users/samiazirar/FDS_Trading_Bot/Reinforcement_learning/AAPL_daily_yf_test.csv")
+enviroment = Enviroment("/AAPL_daily_yf_test.csv")
 enviroment.data_indicator = ".csv"
 #enviroment.append_new_data("Close_Minute/")
 enviroment.get_data()
