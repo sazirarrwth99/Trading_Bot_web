@@ -99,5 +99,5 @@ while True:
         print(e)
     st.write("Last updated at: " + actual_time)
     st.balloons()
-    time.sleep(30) # refresh every minute
+    time.sleep(60) # refresh every minute
     st.experimental_rerun()
