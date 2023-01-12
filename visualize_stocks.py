@@ -43,7 +43,7 @@ while True:
     try:
         start_time = dt.datetime.now() - dt.timedelta(days=3)
         stock_data = yf.download(stock_symbol, start=start_time, interval="1m",period="3d")
-        
+        time.sleep(50)
         timeseries = list(stock_data["Close"].values)
         list_actions = [ enviroment.predict(timeseries, t=i) for i in tqdm(range(1023, len(timeseries)))]
         #generate profits
@@ -99,5 +99,5 @@ while True:
         print(e)
     st.write("Last updated at: " + actual_time)
     st.balloons()
-    time.sleep(100) # refresh every minute
+    time.sleep(10) # refresh every minute
     st.experimental_rerun()
