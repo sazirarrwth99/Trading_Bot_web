@@ -30,7 +30,7 @@ enviroment.create_agent(model_name="agent_lstm_appl_train")
 
 while True:
     actual_time = dt.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    st.title("Real-time Stock Price Data")
+    st.title("Live Trading Bot --BETA--")
     #set streamlit theme to light
     
     stock_symbol = st.text_input("Enter a stock symbol (e.g. GOOG, AAPL): ")
