@@ -6,6 +6,5 @@ plotly
 numpy
 tqdm
 scikit-learn
-logging
 pytorch
 pandas
