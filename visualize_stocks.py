@@ -42,7 +42,7 @@ while True:
     # Get the stock data
     try:
         start_time = dt.datetime.now() - dt.timedelta(days=3)
-        while stock_data["Close"].sum() < 10:
+        while stock_data["Close"].max() < 10:
             stock_data = yf.download(stock_symbol, start=start_time, interval="1m",period="3d")
         timeseries = list(stock_data["Close"].values)
         list_actions = [ enviroment.predict(timeseries, t=i) for i in tqdm(range(1023, len(timeseries)))]
