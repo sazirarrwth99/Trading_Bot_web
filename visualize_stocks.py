@@ -69,7 +69,7 @@ while True:
         stock_data["Date"] = pd.to_datetime(stock_data.index)
         dates_min = pd.to_datetime(stock_data["Date"].iloc[1023:])
         dates_min = list(dates_min)    
-        start_price = stock_data["Close"].iloc[1023]
+        start_price = stock_data["Close"].iloc[-len(portefolio_values)]
         
         #plot  with plotly
         colors = ["#003366","#99ccff"]
