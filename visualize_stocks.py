@@ -28,8 +28,8 @@ enviroment.get_data()
 enviroment.window_size = 1024
 enviroment.create_agent(model_name="agent_lstm_appl_train")
 stock_symbol = "AAPL"
-start_time = dt.datetime.now() - dt.timedelta(days=3)
-stock_data = yf.download(stock_symbol, start=start_time, interval="1m",period="3d")
+start_time = dt.datetime.now() - dt.timedelta(days=5)
+stock_data = yf.download(stock_symbol, start=start_time, interval="1m",period="5d")
 while True:
     actual_time = dt.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     st.title("Live Trading Bot --BETA--")
